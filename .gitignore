@@ -1,0 +1,7 @@
+echo ".idea/
+target/
+*.jar
+__pycache__/
+venv/
+.env
+.DS_Store" > .gitignore
