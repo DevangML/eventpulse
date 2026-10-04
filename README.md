@@ -15,11 +15,11 @@ Built to demonstrate enterprise-grade distributed systems patterns, this project
 
 ```mermaid
 graph TD
-    A[IoT Edge Devices] -->|JSON Payloads| B(Spring Boot Ingestion API<br/>JAVA)
-    B -->|Validates & Produces| C[(Apache Kafka cluster<br/>KRAFT MODE)]
-    C -->|Consumes Batches| D(Anomaly Detector Worker<br/>PYTHON)
-    D -->|Writes Clean Data| E[(PostgreSQL Database<br/>SQL)]
-    D -->|Routes Bad Data| F[(Dead Letter Queue<br/>KAFKA)]
+    A[IoT Edge Devices] -->|JSON Payloads| B[Spring Boot Ingestion API - JAVA]
+    B -->|Validates & Produces| C[Apache Kafka cluster - KRAFT MODE]
+    C -->|Consumes Batches| D[Anomaly Detector Worker - PYTHON]
+    D -->|Writes Clean Data| E[PostgreSQL Database - SQL]
+    D -->|Routes Bad Data| F[Dead Letter Queue - KAFKA]
 ```
 
 ### 1. Ingestion Layer (Java 17 / Spring Boot)
